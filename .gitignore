@@ -1,0 +1,12 @@
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.sln
+*.suo
+*.VC.db
+__pycache__/
+Artifacts/
+/Build/Windows/FileOpenOrder/CookerOpenOrder.log
+/Build/Windows/FileOpenOrder/EditorOpenOrder.log

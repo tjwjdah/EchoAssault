@@ -1,0 +1,546 @@
+{
+  "source_run": "PerfCheck-20261120-205404-312",
+  "status": "MeasurementValid",
+  "dirty_worktree": true,
+  "executable_sha256": "C8D5731D3F75CD498970DEAC0072768274157009BC1EF4EE4FCB4C0E940D38E5",
+  "build_inputs": {
+    "status": "Stable",
+    "before": {
+      "sha256": "b56084123448021c3eec6cd21416df457eaa2b56e310182616950702d2bd09f7",
+      "file_count": 22,
+      "snapshot": "PerfCheck-BuildInputs.json"
+    },
+    "after": {
+      "sha256": "b56084123448021c3eec6cd21416df457eaa2b56e310182616950702d2bd09f7",
+      "file_count": 22,
+      "snapshot": "PerfCheck-BuildInputs.json"
+    }
+  },
+  "sample_game_seconds": [
+    210,
+    240
+  ],
+  "frame_budget_ms": 16.666666666666668,
+  "cases": {
+    "Moving": {
+      "median_average_fps": 89.1567655643207,
+      "median_p95_ms": 13.4155,
+      "over_budget_frames": 1,
+      "samples": 5400,
+      "all_p95_within_budget": true
+    },
+    "Stationary": {
+      "median_average_fps": 85.97587673565951,
+      "median_p95_ms": 13.5728,
+      "over_budget_frames": 2,
+      "samples": 5400,
+      "all_p95_within_budget": true
+    }
+  },
+  "runs": {
+    "1-Moving": {
+      "status": "MeasurementValid",
+      "capture": "PerfCheck-Frames.csv",
+      "saved_viewport": [
+        1920,
+        1080
+      ],
+      "runtime_viewport": [
+        1920,
+        1080
+      ],
+      "samples": 1800,
+      "alive": {
+        "min": 473,
+        "mean": 492.0233333333333,
+        "max": 500
+      },
+      "ranged": {
+        "min": 88,
+        "mean": 99.50333333333333,
+        "max": 100
+      },
+      "melee": {
+        "min": 376,
+        "mean": 392.52,
+        "max": 400
+      },
+      "echo_shots_before_sample": [
+        116,
+        78,
+        40
+      ],
+      "echo_shots_during_sample": [
+        144,
+        144,
+        144
+      ],
+      "player_travel_cm": 14691.832999999999,
+      "player_hits_during_sample": 35,
+      "player_hp": 512.0,
+      "kills": 1498,
+      "echo_kills": 482,
+      "average_fps": 87.96822259385213,
+      "over_budget_frames": 1,
+      "p95_within_budget": true,
+      "frame": {
+        "mean_ms": 11.367741333333333,
+        "p95_ms": 13.5779,
+        "p99_ms": 14.4377,
+        "max_ms": 16.8064
+      },
+      "additional_timings": {
+        "game_thread": {
+          "mean_ms": 11.332024055555555,
+          "p95_ms": 13.496,
+          "p99_ms": 14.4922,
+          "max_ms": 16.4483
+        },
+        "gpu": {
+          "mean_ms": 3.754713722222222,
+          "p95_ms": 4.8457,
+          "p99_ms": 5.0641,
+          "max_ms": 6.5267
+        },
+        "physics_wait": {
+          "mean_ms": 3.2346690555555555,
+          "p95_ms": 3.8672,
+          "p99_ms": 4.2226,
+          "max_ms": 5.1949
+        },
+        "enemy_update": {
+          "mean_ms": 1.401791,
+          "p95_ms": 2.0158,
+          "p99_ms": 2.3235,
+          "max_ms": 3.3385
+        },
+        "enemy_refill": {
+          "mean_ms": 0.2629338333333333,
+          "p95_ms": 0.4868,
+          "p99_ms": 0.6867,
+          "max_ms": 1.6286
+        }
+      }
+    },
+    "1-Stationary": {
+      "status": "MeasurementValid",
+      "capture": "PerfCheck-Frames.csv",
+      "saved_viewport": [
+        1920,
+        1080
+      ],
+      "runtime_viewport": [
+        1920,
+        1080
+      ],
+      "samples": 1800,
+      "alive": {
+        "min": 456,
+        "mean": 494.9483333333333,
+        "max": 500
+      },
+      "ranged": {
+        "min": 91,
+        "mean": 99.66388888888889,
+        "max": 100
+      },
+      "melee": {
+        "min": 357,
+        "mean": 395.28444444444443,
+        "max": 400
+      },
+      "echo_shots_before_sample": [
+        116,
+        78,
+        40
+      ],
+      "echo_shots_during_sample": [
+        144,
+        144,
+        144
+      ],
+      "player_travel_cm": 0.0,
+      "player_hits_during_sample": 35,
+      "player_hp": 512.0,
+      "kills": 1406,
+      "echo_kills": 725,
+      "average_fps": 85.25333190979214,
+      "over_budget_frames": 1,
+      "p95_within_budget": true,
+      "frame": {
+        "mean_ms": 11.729746833333333,
+        "p95_ms": 13.9291,
+        "p99_ms": 14.9481,
+        "max_ms": 17.0718
+      },
+      "additional_timings": {
+        "game_thread": {
+          "mean_ms": 11.689463722222222,
+          "p95_ms": 13.8893,
+          "p99_ms": 14.8145,
+          "max_ms": 16.9545
+        },
+        "gpu": {
+          "mean_ms": 4.076742277777778,
+          "p95_ms": 4.9342,
+          "p99_ms": 5.4033,
+          "max_ms": 6.2937
+        },
+        "physics_wait": {
+          "mean_ms": 3.6065027777777776,
+          "p95_ms": 4.2395,
+          "p99_ms": 4.5746,
+          "max_ms": 5.1272
+        },
+        "enemy_update": {
+          "mean_ms": 1.5369055555555555,
+          "p95_ms": 2.1356,
+          "p99_ms": 2.4487,
+          "max_ms": 2.9828
+        },
+        "enemy_refill": {
+          "mean_ms": 0.22557188888888888,
+          "p95_ms": 0.4156,
+          "p99_ms": 0.5107,
+          "max_ms": 0.6829
+        }
+      }
+    },
+    "2-Stationary": {
+      "status": "MeasurementValid",
+      "capture": "PerfCheck-Frames.csv",
+      "saved_viewport": [
+        1920,
+        1080
+      ],
+      "runtime_viewport": [
+        1920,
+        1080
+      ],
+      "samples": 1800,
+      "alive": {
+        "min": 456,
+        "mean": 494.9483333333333,
+        "max": 500
+      },
+      "ranged": {
+        "min": 91,
+        "mean": 99.66388888888889,
+        "max": 100
+      },
+      "melee": {
+        "min": 357,
+        "mean": 395.28444444444443,
+        "max": 400
+      },
+      "echo_shots_before_sample": [
+        116,
+        78,
+        40
+      ],
+      "echo_shots_during_sample": [
+        144,
+        144,
+        144
+      ],
+      "player_travel_cm": 0.0,
+      "player_hits_during_sample": 35,
+      "player_hp": 512.0,
+      "kills": 1406,
+      "echo_kills": 725,
+      "average_fps": 85.97587673565951,
+      "over_budget_frames": 0,
+      "p95_within_budget": true,
+      "frame": {
+        "mean_ms": 11.631169555555555,
+        "p95_ms": 13.5728,
+        "p99_ms": 14.4531,
+        "max_ms": 15.6193
+      },
+      "additional_timings": {
+        "game_thread": {
+          "mean_ms": 11.592656277777778,
+          "p95_ms": 13.5525,
+          "p99_ms": 14.4107,
+          "max_ms": 15.4953
+        },
+        "gpu": {
+          "mean_ms": 4.019653277777778,
+          "p95_ms": 5.1208,
+          "p99_ms": 5.3799,
+          "max_ms": 6.5361
+        },
+        "physics_wait": {
+          "mean_ms": 3.5898558888888887,
+          "p95_ms": 4.2359,
+          "p99_ms": 4.7224,
+          "max_ms": 5.0797
+        },
+        "enemy_update": {
+          "mean_ms": 1.5335266666666667,
+          "p95_ms": 2.1314,
+          "p99_ms": 2.3366,
+          "max_ms": 2.6126
+        },
+        "enemy_refill": {
+          "mean_ms": 0.2219086111111111,
+          "p95_ms": 0.4052,
+          "p99_ms": 0.492,
+          "max_ms": 0.941
+        }
+      }
+    },
+    "2-Moving": {
+      "status": "MeasurementValid",
+      "capture": "PerfCheck-Frames.csv",
+      "saved_viewport": [
+        1920,
+        1080
+      ],
+      "runtime_viewport": [
+        1920,
+        1080
+      ],
+      "samples": 1800,
+      "alive": {
+        "min": 473,
+        "mean": 492.0233333333333,
+        "max": 500
+      },
+      "ranged": {
+        "min": 88,
+        "mean": 99.50333333333333,
+        "max": 100
+      },
+      "melee": {
+        "min": 376,
+        "mean": 392.52,
+        "max": 400
+      },
+      "echo_shots_before_sample": [
+        116,
+        78,
+        40
+      ],
+      "echo_shots_during_sample": [
+        144,
+        144,
+        144
+      ],
+      "player_travel_cm": 14691.832999999999,
+      "player_hits_during_sample": 35,
+      "player_hp": 512.0,
+      "kills": 1498,
+      "echo_kills": 482,
+      "average_fps": 90.34786956435909,
+      "over_budget_frames": 0,
+      "p95_within_budget": true,
+      "frame": {
+        "mean_ms": 11.06832961111111,
+        "p95_ms": 13.1901,
+        "p99_ms": 14.1701,
+        "max_ms": 15.3621
+      },
+      "additional_timings": {
+        "game_thread": {
+          "mean_ms": 11.035399222222223,
+          "p95_ms": 13.1384,
+          "p99_ms": 14.0446,
+          "max_ms": 15.3329
+        },
+        "gpu": {
+          "mean_ms": 3.581906666666667,
+          "p95_ms": 4.6704,
+          "p99_ms": 4.892,
+          "max_ms": 5.3062
+        },
+        "physics_wait": {
+          "mean_ms": 3.147874277777778,
+          "p95_ms": 3.7172,
+          "p99_ms": 4.0872,
+          "max_ms": 5.0246
+        },
+        "enemy_update": {
+          "mean_ms": 1.3475627777777779,
+          "p95_ms": 1.9883,
+          "p99_ms": 2.3055,
+          "max_ms": 3.4384
+        },
+        "enemy_refill": {
+          "mean_ms": 0.246752,
+          "p95_ms": 0.4791,
+          "p99_ms": 0.5889,
+          "max_ms": 1.2293
+        }
+      }
+    },
+    "3-Moving": {
+      "status": "MeasurementValid",
+      "capture": "PerfCheck-Frames.csv",
+      "saved_viewport": [
+        1920,
+        1080
+      ],
+      "runtime_viewport": [
+        1920,
+        1080
+      ],
+      "samples": 1800,
+      "alive": {
+        "min": 473,
+        "mean": 492.0233333333333,
+        "max": 500
+      },
+      "ranged": {
+        "min": 88,
+        "mean": 99.50333333333333,
+        "max": 100
+      },
+      "melee": {
+        "min": 376,
+        "mean": 392.52,
+        "max": 400
+      },
+      "echo_shots_before_sample": [
+        116,
+        78,
+        40
+      ],
+      "echo_shots_during_sample": [
+        144,
+        144,
+        144
+      ],
+      "player_travel_cm": 14691.832999999999,
+      "player_hits_during_sample": 35,
+      "player_hp": 512.0,
+      "kills": 1498,
+      "echo_kills": 482,
+      "average_fps": 89.1567655643207,
+      "over_budget_frames": 0,
+      "p95_within_budget": true,
+      "frame": {
+        "mean_ms": 11.216198722222222,
+        "p95_ms": 13.4155,
+        "p99_ms": 14.7221,
+        "max_ms": 16.4744
+      },
+      "additional_timings": {
+        "game_thread": {
+          "mean_ms": 11.181722777777777,
+          "p95_ms": 13.3966,
+          "p99_ms": 14.6747,
+          "max_ms": 16.3353
+        },
+        "gpu": {
+          "mean_ms": 3.574520388888889,
+          "p95_ms": 4.6627,
+          "p99_ms": 4.9267,
+          "max_ms": 5.1564
+        },
+        "physics_wait": {
+          "mean_ms": 3.1710545555555556,
+          "p95_ms": 3.751,
+          "p99_ms": 4.1176,
+          "max_ms": 5.3574
+        },
+        "enemy_update": {
+          "mean_ms": 1.3747651111111112,
+          "p95_ms": 2.026,
+          "p99_ms": 2.4095,
+          "max_ms": 3.5782
+        },
+        "enemy_refill": {
+          "mean_ms": 0.2562987222222222,
+          "p95_ms": 0.4864,
+          "p99_ms": 0.629,
+          "max_ms": 1.4389
+        }
+      }
+    },
+    "3-Stationary": {
+      "status": "MeasurementValid",
+      "capture": "PerfCheck-Frames.csv",
+      "saved_viewport": [
+        1920,
+        1080
+      ],
+      "runtime_viewport": [
+        1920,
+        1080
+      ],
+      "samples": 1800,
+      "alive": {
+        "min": 456,
+        "mean": 494.9483333333333,
+        "max": 500
+      },
+      "ranged": {
+        "min": 91,
+        "mean": 99.66388888888889,
+        "max": 100
+      },
+      "melee": {
+        "min": 357,
+        "mean": 395.28444444444443,
+        "max": 400
+      },
+      "echo_shots_before_sample": [
+        116,
+        78,
+        40
+      ],
+      "echo_shots_during_sample": [
+        144,
+        144,
+        144
+      ],
+      "player_travel_cm": 0.0,
+      "player_hits_during_sample": 35,
+      "player_hp": 512.0,
+      "kills": 1406,
+      "echo_kills": 725,
+      "average_fps": 87.5806003656967,
+      "over_budget_frames": 1,
+      "p95_within_budget": true,
+      "frame": {
+        "mean_ms": 11.418053722222222,
+        "p95_ms": 13.4259,
+        "p99_ms": 14.39,
+        "max_ms": 16.7622
+      },
+      "additional_timings": {
+        "game_thread": {
+          "mean_ms": 11.376966888888889,
+          "p95_ms": 13.3854,
+          "p99_ms": 14.4537,
+          "max_ms": 16.4686
+        },
+        "gpu": {
+          "mean_ms": 4.067058111111111,
+          "p95_ms": 5.1252,
+          "p99_ms": 5.3996,
+          "max_ms": 6.4125
+        },
+        "physics_wait": {
+          "mean_ms": 3.5392715,
+          "p95_ms": 4.2008,
+          "p99_ms": 4.5097,
+          "max_ms": 5.0809
+        },
+        "enemy_update": {
+          "mean_ms": 1.469495888888889,
+          "p95_ms": 2.0029,
+          "p99_ms": 2.2306,
+          "max_ms": 2.6771
+        },
+        "enemy_refill": {
+          "mean_ms": 0.21850144444444444,
+          "p95_ms": 0.4033,
+          "p99_ms": 0.5015,
+          "max_ms": 0.9378
+        }
+      }
+    }
+  }
+}

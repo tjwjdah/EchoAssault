@@ -1,0 +1,64 @@
+{
+  "PerfCheck-20261120-004124-569": {
+    "status": "MeasurementValid",
+    "cases": {
+      "Moving": {
+        "median_average_fps": 118.38057504192992,
+        "median_p95_ms": 9.9734,
+        "over_budget_frames": 4,
+        "samples": 5400,
+        "all_p95_within_budget": true
+      },
+      "Stationary": {
+        "median_average_fps": 109.56011322380341,
+        "median_p95_ms": 10.6141,
+        "over_budget_frames": 0,
+        "samples": 5400,
+        "all_p95_within_budget": true
+      }
+    },
+    "valid_runs": 6
+  },
+  "PerfCheck-20261120-010224-535": {
+    "status": "MeasurementValid",
+    "cases": {
+      "Moving": {
+        "median_average_fps": 113.52630976959172,
+        "median_p95_ms": 10.9721,
+        "over_budget_frames": 0,
+        "samples": 5400,
+        "all_p95_within_budget": true
+      },
+      "Stationary": {
+        "median_average_fps": 106.0924271803093,
+        "median_p95_ms": 11.7943,
+        "over_budget_frames": 5,
+        "samples": 5400,
+        "all_p95_within_budget": true
+      }
+    },
+    "valid_runs": 6
+  },
+  "PerfCheck-20261120-010148-557": {
+    "status": "MeasurementFailed",
+    "runs": [],
+    "automation_tool_exit_code": 1,
+    "stage": "Staging",
+    "error_type": "System.UnauthorizedAccessException",
+    "affected_file": "StagedBuild_EchoAssault.ini"
+  },
+  "EnemyBoundsResolution-20261119-221257": {
+    "status": "ExcludedFrom1080p",
+    "requested_viewport": [
+      1920,
+      1080
+    ],
+    "saved_settings": {
+      "ResolutionSizeX": 888,
+      "ResolutionSizeY": 500,
+      "LastUserConfirmedResolutionSizeX": 888,
+      "LastUserConfirmedResolutionSizeY": 500
+    },
+    "frame_csv_has_runtime_viewport_columns": false
+  }
+}
