@@ -4,6 +4,8 @@ Unreal Engine 5.5 C++로 만든 4분 생존 액션 게임입니다. 플레이어
 
 본 저장소는 포트폴리오 공개를 위해 정리한 최신 스냅샷입니다. 개발 중 사용한 로컬 Git 이력은 보안 정보와 개인정보 보호를 위해 제외했으며, 주요 검증 결과는 [`Docs/Evidence`](Docs/Evidence/README.md)에 별도로 정리했습니다.
 
+이 README는 실제 개발 자료를 포트폴리오 열람에 맞게 재구성했습니다. 당시 실행 절차와 협업 방식은 환경 경로를 익명화한 [개발 당시 README](Docs/Original/README.md)에 보존했습니다.
+
 ## 게임 화면
 
 | 아레나 전투와 첫 분신 | 최종 웨이브 검증에서 생존 적 500마리 |
@@ -74,3 +76,14 @@ WASD로 이동하고 마우스로 조준합니다. 공격은 자동입니다. �
 | `Content/Echo/`, `ArtSource/` | 아레나와 임포트된 메시, 재생성 가능한 OBJ 원본 |
 | `Tools/`, `FirstPlay.cmd` | 실행, 에셋 생성, 빌드·자동 검증·성능 측정 |
 | `Docs/`, `AGENTS.md`, `.agents/skills/` | 설계와 인수인계, 검증 수치의 근거와 QA 절차 |
+
+### 개발 당시 상세 문서
+
+당시 운영 문서의 본문과 기록 순서를 보존했습니다. 문서에 나온 일정·버전·실패 상태는 작성 시점의 기록입니다. 현재 실행 방법과 검증 상태는 공개 README와 [Docs/Status.md](Docs/Status.md)에서 확인할 수 있습니다.
+
+- [README 보관본](Docs/Original/README.md) · 첫 실행, 검증, 도구 도입과 세션 시작 절차
+- [작업 지침 보관본](Docs/Original/Agent-Workflow-History.md) · 당시 역할 분담과 검토·승인 규칙
+- [설계 보관본](Docs/Original/Design.md) · 구현 기준, 설계 결정과 충돌 검사의 기술적 배경
+- [상태·검증 이력 보관본](Docs/Original/Status.md) · 작업별 결정, 실패·수정·재검증과 역할별 기여
+
+공개를 위해 정리한 항목은 [익명화 기록](Docs/Original/Redaction-Notes.md)에 남겼습니다.
