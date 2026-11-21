@@ -46,6 +46,12 @@ Unreal Engine 5.5 C++로 만든 4분 생존 액션 게임입니다. 플레이어
 
 ## 실행과 검증
 
+### Windows 실행 파일
+
+ZIP 전체를 푼 뒤 폴더 맨 위의 `EchoAssault.exe`를 실행합니다. [Windows 64비트 ZIP 다운로드](https://github.com/tjwjdah/EchoAssault/releases/download/portfolio-win64/EchoAssault-Win64.zip) · [배포 안내](https://github.com/tjwjdah/EchoAssault/releases/tag/portfolio-win64)
+
+### 소스에서 빌드와 검증
+
 Windows, Unreal Engine 5.5.3, Visual Studio 2022 C++ 빌드 도구와 Windows SDK가 필요합니다. 저장소 루트에서 `FirstPlay.cmd`를 실행하면 Editor 빌드, 네이티브 리플레이 검사, Unreal 자동 테스트를 거쳐 게임 창을 엽니다. 첫 빌드에는 시간이 걸립니다.
 
 WASD로 이동하고 마우스로 조준합니다. 공격은 자동입니다. 경험치 결정체를 모아 강화 셋 중 하나를 선택하고, 최종 웨이브를 지나 4:00까지 생존하면 승리합니다.
