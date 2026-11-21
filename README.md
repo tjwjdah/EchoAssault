@@ -2,6 +2,18 @@
 
 Unreal Engine 5.5 C++로 만든 4분 생존 액션 게임입니다. 플레이어의 과거 이동과 공격이 시간 잔상으로 돌아옵니다. 지금 그리는 동선이 몇 초 뒤 분신의 위치와 사격 방향을 결정합니다.
 
+본 저장소는 포트폴리오 공개를 위해 정리한 최신 스냅샷입니다. 개발 중 사용한 로컬 Git 이력은 보안 정보와 개인정보 보호를 위해 제외했으며, 주요 검증 결과는 [`Docs/Evidence`](Docs/Evidence/README.md)에 별도로 정리했습니다.
+
+## 게임 화면
+
+| 아레나 전투와 첫 분신 | 최종 웨이브 검증에서 생존 적 500마리 |
+| --- | --- |
+| ![아레나에서 플레이어와 첫 분신이 사격하는 장면](Docs/Media/arena-combat.png) | ![최종 웨이브 검증 중 HUD에 생존 적 500마리가 표시된 장면](Docs/Media/final-wave-500.png) |
+
+### 시연 영상
+
+촬영 후 이곳에 시연 영상 링크를 추가합니다.
+
 ## 실행과 검증
 
 Windows, Unreal Engine 5.5.3, Visual Studio 2022 C++ 빌드 도구와 Windows SDK가 필요합니다. 저장소 루트에서 `FirstPlay.cmd`를 실행하면 Editor 빌드, 네이티브 리플레이 검사, Unreal 자동 테스트를 거쳐 게임 창을 엽니다. 첫 빌드에는 시간이 걸립니다.
@@ -24,7 +36,7 @@ WASD로 이동하고 마우스로 조준합니다. 공격은 자동입니다. �
 - **전투와 성장** — 블래스터·유도탄·방사형 칼날과 플레이어 전용 분해장이 있습니다. 초기 웨이브부터 동시 생존 적 목표를 단계적으로 올려, 3:30 최종 웨이브에는 500마리를 목표로 보충합니다.
 - **탄환 표시** — 탄환 Actor가 이동과 구체 충돌을 담당합니다. 메시와 색이 같은 탄환은 ISM에 모으고, 프레임마다 그룹 단위로 위치를 갱신합니다.
 
-[시스템 설계](Docs/Design.md) · [탄환 렌더링과 관리 코드](Source/EchoAssault/EchoGame.cpp) · [HUD와 입력 전환](Source/EchoAssault/EchoInterface.cpp)
+[시스템 설계](Docs/Design.md) · [시간 잔상 재생](https://github.com/tjwjdah/EchoAssault/blob/f0af1f81c45122c16d291f97ee0716a4bd4b9fce/Source/EchoAssault/EchoGame.cpp#L556) · [탄환 ISM 일괄 갱신](https://github.com/tjwjdah/EchoAssault/blob/f0af1f81c45122c16d291f97ee0716a4bd4b9fce/Source/EchoAssault/EchoGame.cpp#L787) · [강화창 입력 초기화](https://github.com/tjwjdah/EchoAssault/blob/f0af1f81c45122c16d291f97ee0716a4bd4b9fce/Source/EchoAssault/EchoInterface.cpp#L72)
 
 ## AI 협업과 개발 하네스
 
@@ -35,7 +47,7 @@ WASD로 이동하고 마우스로 조준합니다. 공격은 자동입니다. �
 | 개발자 | 시간 잔상의 플레이 기준과 성능 시나리오 설정, C++ 분해장·탄환 ISM 일괄 갱신·강화창 입력 버그 수정, 직접 플레이와 Unreal Insights 구간 확인 |
 | Codex | 게임 기반 구현 지원, 빌드·리플레이·성능 검증 자동화, 회귀 테스트 구현, 계측 원본 재집계와 검증 기록 정리 |
 
-개발자가 강화 전후의 공격이 분신에서 어떤 단계로 재생되어야 하는지 짚었습니다. Codex는 이를 [회귀 테스트](Source/EchoAssault/EchoGameplayTests.cpp)로 구현했습니다. 같은 칼날 무기의 1단계 공격 6발과 2단계 공격 8발을 각각 기록하고, 첫 분신이 18초와 21초에 해당 공격을 중복 없이 재생하는지 확인합니다. 새 Codex 세션에는 기존 대화 없이 문서와 실행 근거를 전달했습니다. [인수인계와 QA 세 사례](Docs/Status.md#인수인계와-qa-사례)
+개발자가 강화 전후의 공격이 분신에서 어떤 단계로 재생되어야 하는지 짚었습니다. Codex는 이를 [회귀 테스트](https://github.com/tjwjdah/EchoAssault/blob/f0af1f81c45122c16d291f97ee0716a4bd4b9fce/Source/EchoAssault/EchoGameplayTests.cpp#L478)로 구현했습니다. 같은 칼날 무기의 1단계 공격 6발과 2단계 공격 8발을 각각 기록하고, 첫 분신이 18초와 21초에 해당 공격을 중복 없이 재생하는지 확인합니다. 새 Codex 세션에는 기존 대화 없이 문서와 실행 근거를 전달했습니다. [인수인계와 QA 세 사례](Docs/Status.md#인수인계와-qa-사례)
 
 ## 성능 분석
 
