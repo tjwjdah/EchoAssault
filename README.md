@@ -14,22 +14,6 @@ Unreal Engine 5.5 C++로 만든 4분 생존 액션 게임입니다. 플레이어
 
 촬영 후 이곳에 시연 영상 링크를 추가합니다.
 
-## 실행과 검증
-
-Windows, Unreal Engine 5.5.3, Visual Studio 2022 C++ 빌드 도구와 Windows SDK가 필요합니다. 저장소 루트에서 `FirstPlay.cmd`를 실행하면 Editor 빌드, 네이티브 리플레이 검사, Unreal 자동 테스트를 거쳐 게임 창을 엽니다. 첫 빌드에는 시간이 걸립니다.
-
-WASD로 이동하고 마우스로 조준합니다. 공격은 자동입니다. 경험치 결정체를 모아 강화 셋 중 하나를 선택하고, 최종 웨이브를 지나 4:00까지 생존하면 승리합니다.
-
-| 작업 | 저장소 루트의 PowerShell에서 실행 |
-| --- | --- |
-| Editor 빌드와 자동 검증 | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Tools\Verify.ps1` |
-| Win64 Development 게임 타깃 컴파일 | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Tools\Build.ps1 -Game` |
-| 1080p 패키지 성능 측정 | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Tools\PerfCheck.ps1` |
-
-별도 위치에 UE를 설치했다면 PowerShell 스크립트에 `-EngineRoot`로 엔진 루트를 넘깁니다. 전체 검증 전에는 프로젝트 에디터와 게임을 닫습니다. 자동 검증 증거는 실행 후 `Saved/TestReports`와 `Saved/Logs`에 생성됩니다. `Build.ps1 -Game`은 C++ 타깃을 컴파일합니다. 실행 가능한 별도 배포본을 만들 때는 에디터의 Windows 패키징으로 콘텐츠도 쿠킹합니다.
-
-성능 측정에는 유효한 커밋이 있는 Git 체크아웃과 Python 3가 추가로 필요합니다. [측정 조건과 확인 방법](Docs/Evidence/README.md)을 참고하세요.
-
 ## 핵심 시스템
 
 - **시간 잔상** — 최대 3기가 기본 8·16·24초 지연으로 이동과 공격을 재현합니다. 발사 시각·원점·방향·무기·당시 강화 단계를 기록하고 살아 있는 적과의 충돌은 현재 월드에서 판정합니다.
@@ -59,6 +43,22 @@ WASD로 이동하고 마우스로 조준합니다. 공격은 자동입니다. �
 시작 적 500마리 중 100마리를 원거리 적으로 설정해 적 탄환도 부하에 포함했습니다. 세 분신의 공격 재생 이후 30초 구간을 측정했습니다. 이동과 정지의 적 밀집·충돌 양상이 다를 수 있어 따로 반복했습니다. 수치는 i9-12900KF·RTX 3050의 DX12 오프스크린 Development 실행에서 나온 값입니다. [프레임 원본 발췌](Docs/Evidence/PerfCheck-Frames.csv) · [회차별 집계](Docs/Evidence/PerfCheck-Summary.json)
 
 별도의 Unreal Insights A/B 측정에서 160발/초 첫 쌍 360표본의 **탄환 위치 적용 구간** 평균은 개별 호출 0.349 ms에서 일괄 호출 0.026 ms로 줄었습니다. 같은 구간을 포함한 테스트 전체 CPU 범위는 2.534 ms에서 2.216 ms로 줄었습니다. [A/B 실험 범위와 원본 발췌](Docs/Evidence/README.md#탄환-ism-격리-측정)
+
+## 실행과 검증
+
+Windows, Unreal Engine 5.5.3, Visual Studio 2022 C++ 빌드 도구와 Windows SDK가 필요합니다. 저장소 루트에서 `FirstPlay.cmd`를 실행하면 Editor 빌드, 네이티브 리플레이 검사, Unreal 자동 테스트를 거쳐 게임 창을 엽니다. 첫 빌드에는 시간이 걸립니다.
+
+WASD로 이동하고 마우스로 조준합니다. 공격은 자동입니다. 경험치 결정체를 모아 강화 셋 중 하나를 선택하고, 최종 웨이브를 지나 4:00까지 생존하면 승리합니다.
+
+| 작업 | 저장소 루트의 PowerShell에서 실행 |
+| --- | --- |
+| Editor 빌드와 자동 검증 | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Tools\Verify.ps1` |
+| Win64 Development 게임 타깃 컴파일 | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Tools\Build.ps1 -Game` |
+| 1080p 패키지 성능 측정 | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Tools\PerfCheck.ps1` |
+
+별도 위치에 UE를 설치했다면 PowerShell 스크립트에 `-EngineRoot`로 엔진 루트를 넘깁니다. 전체 검증 전에는 프로젝트 에디터와 게임을 닫습니다. 자동 검증 증거는 실행 후 `Saved/TestReports`와 `Saved/Logs`에 생성됩니다. `Build.ps1 -Game`은 C++ 타깃을 컴파일합니다. 실행 가능한 별도 배포본을 만들 때는 에디터의 Windows 패키징으로 콘텐츠도 쿠킹합니다.
+
+성능 측정에는 유효한 커밋이 있는 Git 체크아웃과 Python 3가 추가로 필요합니다. [측정 조건과 확인 방법](Docs/Evidence/README.md)을 참고하세요.
 
 ## 저장소 구성
 
