@@ -14,7 +14,7 @@ Unreal Engine 5.5 C++로 만든 4분 생존 액션 게임입니다. 플레이어
 
 ### 시연 영상
 
-촬영 후 이곳에 시연 영상 링크를 추가합니다.
+[Echo Assault 시연 영상 보기 (1분 36초)](https://www.youtube.com/watch?v=v_glccnfzbg)
 
 ## 핵심 시스템
 
