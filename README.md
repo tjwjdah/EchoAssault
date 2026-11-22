@@ -12,8 +12,9 @@ Unreal Engine 5.5 C++로 만든 4분 생존 액션 게임입니다. 플레이어
 | --- | --- |
 | ![아레나에서 플레이어와 첫 분신이 사격하는 장면](Docs/Media/arena-combat.png) | ![최종 웨이브 검증 중 HUD에 생존 적 500마리가 표시된 장면](Docs/Media/final-wave-500.png) |
 
-### 시연 영상
+### 포트폴리오 및 시연
 
+[PDF 포트폴리오 보기](https://github.com/tjwjdah/EchoAssault/blob/main/Docs/Echo_Assault_AI_Game_Portfolio.pdf)
 [Echo Assault 시연 영상 보기 (1분 36초)](https://www.youtube.com/watch?v=v_glccnfzbg)
 
 ## 핵심 시스템
